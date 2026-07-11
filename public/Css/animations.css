@@ -1,0 +1,19 @@
+/* ======================================= */
+/* FOR ACCENT LINE */
+
+.accent_line {
+  animation: lineRunner 2s linear infinite;
+}
+
+/* ANIMATION  */
+@keyframes lineRunner {
+  from {
+    left: -100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+/* ======================================= */
