@@ -17,8 +17,8 @@ import {
 import { Phone, Mail, Copy, Menu, X } from "lucide-react";
 
 // Components
-import SmButton from "./Buttons/SmButton";
-import CopyButton from "./Buttons/CopyButton";
+import SmButton from "../../Common/Buttons/SmButton";
+import CopyButton from "../../Common/Buttons/CopyButton";
 
 const SOCIAL_LINKS = [
   {

@@ -7,8 +7,8 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 // Components
-import Line from "../../Common/Line";
-import Button from "../../Common/Buttons/Button";
+import Line from "../Common/Line";
+import Button from "../Common/Buttons/Button";
 
 // Configs
 const BLOGS = [

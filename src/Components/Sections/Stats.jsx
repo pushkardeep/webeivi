@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 import { Users, Trophy, Flag, Award } from "lucide-react";
 
 // Components
-import Line from "../../Common/Line";
+import Line from "../Common/Line";
 
 // Configs
 const STATS = [

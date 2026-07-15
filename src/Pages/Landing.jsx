@@ -1,19 +1,19 @@
 import React from "react";
 
 // Comonent Sections
-import Hero from "../Components/Sections/Landing/Hero";
-import Boost from "../Components/Sections/Landing/Boost";
-import Stats from "../Components/Sections/Landing/Stats";
-import Blogs from "../Components/Sections/Landing/Blogs";
-import Footer from "../Components/Common/Footer";
-import Welcome from "../Components/Sections/Landing/Welcome";
-import Mission from "../Components/Sections/Landing/Mission";
-import Reviews from "../Components/Sections/Landing/Reviews";
-import SeoPartner from "../Components/Sections/Landing/SeoPartner";
-import Speciality from "../Components/Sections/Landing/Speciality";
-import TopServices from "../Components/Sections/Landing/TopServices";
-import WorkingProcess from "../Components/Sections/Landing/WorkingProcess";
-import TablesOfContent from "../Components/Sections/Landing/TablesOfContent";
+import Hero from "../Components/Sections/Hero";
+import Boost from "../Components/Sections/Boost";
+import Stats from "../Components/Sections/Stats";
+import Blogs from "../Components/Sections/Blogs";
+import Footer from "../Components/Sections/Common/Footer";
+import Welcome from "../Components/Sections/Welcome";
+import Mission from "../Components/Sections/Mission";
+import Reviews from "../Components/Sections/Reviews";
+import SeoPartner from "../Components/Sections/SeoPartner";
+import Speciality from "../Components/Sections/Speciality";
+import TopServices from "../Components/Sections/TopServices";
+import WorkingProcess from "../Components/Sections/WorkingProcess";
+import TablesOfContent from "../Components/Sections/TablesOfContent";
 
 function Landing() {
   return (

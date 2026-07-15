@@ -16,9 +16,9 @@ import {
 import { ArrowRight, Phone, Mail, MapPin } from "lucide-react";
 
 // Component
-import Line from "./Line";
-import Button from "./Buttons/Button";
-import IconButton from "./Buttons/IconButton";
+import Line from "../../Common/Line";
+import Button from "../../Common/Buttons/Button";
+import IconButton from "../../Common/Buttons/IconButton";
 
 const FOOTER_SECTIONS = [
   {

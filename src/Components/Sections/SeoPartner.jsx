@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 
 // Components
-import Line from "../../Common/Line";
+import Line from "../Common/Line";
 
 // Configs
 const STATS = [

@@ -6,8 +6,8 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP);
 
 // Components
-import NavBar from "../../Common/NavBar";
-import Button from "../../Common/Buttons/Button";
+import NavBar from "./Common/NavBar";
+import Button from "../Common/Buttons/Button";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
