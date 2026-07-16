@@ -212,16 +212,16 @@ function TopServices() {
         lg:px-20
       "
       >
-          {SERVICES.map((service, index) => (
-            <div key={index} className="service-card">
-              <ServiceCard
-                icon={service.icon}
-                title={service.title}
-                description={service.description}
-                points={service.points}
-              />
-            </div>
-          ))}
+        {SERVICES.map((service, index) => (
+          <div key={index} className="service-card">
+            <ServiceCard
+              icon={service.icon}
+              title={service.title}
+              description={service.description}
+              points={service.points}
+            />
+          </div>
+        ))}
       </div>
     </section>
   );
