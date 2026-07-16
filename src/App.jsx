@@ -8,7 +8,10 @@ import { BrowserRouter, Route, Routes } from "react-router";
 // gsap.registerPlugin(ScrollTrigger);
 
 // Pages
+import Blogs from "./Pages/Blogs";
+import About from "./Pages/About";
 import Landing from "./Pages/Landing";
+import Contact from "./Pages/Contact";
 
 function App() {
   // const lenis = new Lenis({
@@ -31,6 +34,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route index element={<Landing />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/about_us" element={<About />} />
+        <Route path="/contact_us" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );

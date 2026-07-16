@@ -47,7 +47,7 @@ const NAV_LINKS = [
   },
   {
     label: "About Us",
-    path: "/about",
+    path: "/about_us",
   },
   {
     label: "Our Services",
@@ -59,7 +59,7 @@ const NAV_LINKS = [
   },
   {
     label: "Contact Us",
-    path: "/contact",
+    path: "/contact_us",
   },
 ];
 
@@ -138,10 +138,12 @@ const NavBar = forwardRef(({ className, ...props }, ref) => {
 
           {/* NAV LINKS */}
           <div className="hidden lg:flex items-center gap-12">
-            {NAV_LINKS.map(({ label, path }, index) => (
-              <SmButton key={index} className="cursor-pointer">
-                {label}
-              </SmButton>
+            {NAV_LINKS?.map(({ label, path }, index) => (
+              <Link to={path}>
+                <SmButton key={index} className="cursor-pointer">
+                  {label}
+                </SmButton>
+              </Link>
             ))}
           </div>
 
@@ -175,14 +177,16 @@ const NavBar = forwardRef(({ className, ...props }, ref) => {
         </div>
 
         <div className="mt-10 flex flex-col">
-          {NAV_LINKS.map(({ label }) => (
-            <button
-              key={label}
-              className="px-8 py-4 text-left text-white hover:bg-[#3C4BBF20] transition"
-              onClick={() => setIsOpen(false)}
-            >
-              {label}
-            </button>
+          {NAV_LINKS?.map(({ label, path }) => (
+            <Link to={path}>
+              <button
+                key={label}
+                className="px-8 py-4 text-left text-white hover:bg-[#3C4BBF20] transition"
+                onClick={() => setIsOpen(false)}
+              >
+                {label}
+              </button>
+            </Link>
           ))}
         </div>
       </div>

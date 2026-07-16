@@ -1,19 +1,18 @@
 import React, { useRef } from "react";
 
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 // Components
 import Line from "../Common/Line";
 import Button from "../Common/Buttons/Button";
+import ContactUsForm from "../Common/ContactUsForm";
 
 function Reviews() {
   const sectionRef = useRef(null);
-  const leftRef = useRef(null);
-  const rightRef = useRef(null);
 
   useGSAP(
     () => {
@@ -42,7 +41,7 @@ function Reviews() {
           "-=0.4",
         )
         .from(
-          leftRef.current,
+          ".left",
           {
             x: -100,
             opacity: 0,
@@ -52,7 +51,7 @@ function Reviews() {
           "-=0.2",
         )
         .from(
-          rightRef.current,
+          ".right",
           {
             x: 100,
             opacity: 0,
@@ -75,11 +74,11 @@ function Reviews() {
 
       <div
         className="
-        relative
         z-10
         mx-auto
-        flex
+        relative
         max-w-[1400px]
+        flex
         flex-col
         gap-10
         px-6
@@ -90,8 +89,7 @@ function Reviews() {
         xl:gap-16
       "
       >
-        {/* LEFT */}
-        <div ref={leftRef} className="review-panel flex-1">
+        <div className="left review-panel flex-1">
           <h2
             className="
             reviews-heading
@@ -187,117 +185,8 @@ function Reviews() {
         </div>
 
         {/* RIGHT */}
-        <div
-          ref={rightRef}
-          className="
-          form-panel
-          w-full
-          xl:w-[560px]
-          rounded-[24px]
-          lg:rounded-[30px]
-          border
-          border-[#3C4BBF40]
-          bg-gradient-to-b
-          from-[#11162E]
-          to-[#090B15]
-          p-6
-          sm:p-8
-          lg:p-10
-          shadow-[0_0_50px_rgba(43,179,255,.15)]
-        "
-        >
-          <h2 className="mb-5 text-center text-3xl font-bold text-white lg:text-[42px]">
-            Connect With Our Experts
-          </h2>
-
-          <Line className="mx-auto mb-8 lg:mb-10" />
-
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-            <div>
-              <label className="mb-2 block text-sm font-medium text-white">
-                Name <span className="text-red-500">*</span>
-              </label>
-
-              <input
-                type="text"
-                placeholder="Enter your name"
-                className="h-14 w-full rounded-xl border border-[#3C4BBF60] bg-[#0F1327] px-5 text-white placeholder:text-gray-500 outline-none transition focus:border-[#2BB3FF]"
-              />
-            </div>
-
-            <div>
-              <label className="mb-2 block text-sm font-medium text-white">
-                Company <span className="text-gray-400">(Optional)</span>
-              </label>
-
-              <input
-                type="text"
-                placeholder="Company name"
-                className="h-14 w-full rounded-xl border border-[#3C4BBF60] bg-[#0F1327] px-5 text-white placeholder:text-gray-500 outline-none transition focus:border-[#2BB3FF]"
-              />
-            </div>
-
-            <div>
-              <label className="mb-2 block text-sm font-medium text-white">
-                Mobile Number <span className="text-red-500">*</span>
-              </label>
-
-              <input
-                type="tel"
-                placeholder="Enter mobile number"
-                className="h-14 w-full rounded-xl border border-[#3C4BBF60] bg-[#0F1327] px-5 text-white placeholder:text-gray-500 outline-none transition focus:border-[#2BB3FF]"
-              />
-            </div>
-
-            <div>
-              <label className="mb-2 block text-sm font-medium text-white">
-                Email Address <span className="text-red-500">*</span>
-              </label>
-
-              <input
-                type="email"
-                placeholder="Enter email address"
-                className="h-14 w-full rounded-xl border border-[#3C4BBF60] bg-[#0F1327] px-5 text-white placeholder:text-gray-500 outline-none transition focus:border-[#2BB3FF]"
-              />
-            </div>
-          </div>
-
-          <div className="mt-5">
-            <label className="mb-2 block text-sm font-medium text-white">
-              Service <span className="text-red-500">*</span>
-            </label>
-
-            <select className="h-14 w-full rounded-xl border border-[#3C4BBF60] bg-[#0F1327] px-5 text-white outline-none transition focus:border-[#2BB3FF]">
-              <option>Select a service</option>
-              <option>Website Development</option>
-              <option>Website Designing</option>
-              <option>SEO</option>
-              <option>Digital Marketing</option>
-              <option>Graphic Designing</option>
-            </select>
-          </div>
-
-          <div className="mt-5">
-            <label className="mb-2 block text-sm font-medium text-white">
-              Description <span className="text-gray-400">(Optional)</span>
-            </label>
-
-            <textarea
-              rows={5}
-              placeholder="Tell us about your project..."
-              className="w-full rounded-xl border border-[#3C4BBF60] bg-[#0F1327] p-5 text-white placeholder:text-gray-500 outline-none transition focus:border-[#2BB3FF]"
-            />
-          </div>
-
-          <div className="mt-8 flex justify-center">
-            <Button
-              variant="filled"
-              uppercase={false}
-              className="cursor-pointer"
-            >
-              Submit Now
-            </Button>
-          </div>
+        <div className="right">
+          <ContactUsForm />
         </div>
       </div>
     </section>

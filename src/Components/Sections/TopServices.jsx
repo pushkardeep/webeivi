@@ -18,6 +18,7 @@ import {
 
 // Components
 import Line from "../Common/Line";
+import ServiceCard from "../Common/Cards/ServiceCard";
 
 const SERVICES = [
   {
@@ -143,7 +144,7 @@ function TopServices() {
     },
     { scope: sectionRef },
   );
-  
+
   return (
     <section
       ref={sectionRef}
@@ -211,108 +212,16 @@ function TopServices() {
         lg:px-20
       "
       >
-        {SERVICES.map((service, index) => {
-          const Icon = service.icon;
-
-          return (
-            <div className="service-card">
-              <div
-                key={index}
-                className="
-              rounded-[24px]
-              lg:rounded-[28px]
-              border
-              border-[#3C4BBF40]
-              bg-gradient-to-b
-              from-[#10142B]
-              to-[#090B15]
-              p-6
-              sm:p-8
-              lg:p-10
-              transition-all
-              duration-300
-              hover:-translate-y-2
-              hover:border-[#2BB3FF]
-              hover:shadow-[0_0_45px_rgba(43,179,255,.15)]
-            "
-              >
-                {/* Icon */}
-                <div className="mb-6 lg:mb-8 flex justify-center">
-                  <div
-                    className="
-                  service-icon
-                  rounded-full
-                  bg-gradient-to-b
-                  from-[#2BB3FF20]
-                  to-[#3C4BBF20]
-                  p-4
-                  lg:p-5
-                "
-                  >
-                    <Icon className="h-10 w-10 lg:h-12 lg:w-12 text-[#2BB3FF]" />
-                  </div>
-                </div>
-
-                {/* Title */}
-                <h3
-                  className="
-                service-title
-                text-center
-                font-[Poppins]
-                font-bold
-                text-white
-                text-2xl
-                sm:text-[28px]
-                lg:text-[30px]
-              "
-                >
-                  {service.title}
-                </h3>
-
-                {/* Description */}
-                <p
-                  className="
-                service-description
-                mt-5
-                lg:mt-6
-                text-center
-                text-gray-300
-                text-base
-                lg:text-[17px]
-                leading-7
-                lg:leading-8
-              "
-                >
-                  {service.description}
-                </p>
-
-                {/* Divider */}
-                <div className="service-divider my-6 lg:my-8 h-px bg-gradient-to-r from-transparent via-[#3C4BBF] to-transparent" />
-
-                {/* List */}
-                <div className="space-y-3 lg:space-y-4">
-                  {service.points.map((point, i) => (
-                    <div
-                      key={i}
-                      className="
-                    service-point
-                    flex
-                    items-start
-                    gap-3
-                    text-gray-300
-                    text-base
-                    lg:text-[17px]
-                  "
-                    >
-                      <div className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-[#2BB3FF]" />
-                      <span>{point}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+          {SERVICES.map((service, index) => (
+            <div key={index} className="service-card">
+              <ServiceCard
+                icon={service.icon}
+                title={service.title}
+                description={service.description}
+                points={service.points}
+              />
             </div>
-          );
-        })}
+          ))}
       </div>
     </section>
   );

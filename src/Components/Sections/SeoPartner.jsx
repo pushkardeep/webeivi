@@ -17,6 +17,7 @@ import {
 
 // Components
 import Line from "../Common/Line";
+import AnalyticCard from "../Common/Cards/AnalyticCard";
 
 // Configs
 const STATS = [
@@ -215,10 +216,11 @@ function SeoPartner() {
           gap-6
           px-6
           sm:mt-20
-          grid-cols-2
+          grid-cols-1
+          sm:grid-cols-2
+          xl:grid-cols-4
           sm:px-10
           xl:mt-24
-          xl:grid-cols-4
           xl:gap-10
           xl:px-20
         "
@@ -228,62 +230,11 @@ function SeoPartner() {
 
           return (
             <div key={index} className="seo-card">
-              <div
-                className="
-                h-full
-                flex
-                flex-col
-                items-center
-                rounded-3xl
-                border
-                border-[#3C4BBF40]
-                bg-gradient-to-b
-                from-[#11162E]
-                to-[#090B15]
-                p-6
-                lg:p-8
-                transition-all
-                duration-300
-                hover:-translate-y-2
-                hover:border-[#2BB3FF]
-                hover:shadow-[0_0_40px_rgba(43,179,255,.15)]
-              "
-              >
-                <div className="rounded-full bg-gradient-to-b from-[#2BB3FF20] to-[#3C4BBF20] p-4 lg:p-5">
-                  <Icon className="h-10 w-10 lg:h-12 lg:w-12 text-[#2BB3FF]" />
-                </div>
-
-                <h3
-                  className="
-                  mt-6
-                  text-center
-                  font-[Poppins]
-                  font-semibold
-                  leading-snug
-                  text-white
-                  text-xl
-                  lg:text-[22px]
-                "
-                >
-                  {item.title}
-                </h3>
-
-                <span
-                  className="
-                  mt-4
-                  bg-gradient-to-b
-                  from-[#2BB3FF]
-                  to-[#7EDCFF]
-                  bg-clip-text
-                  text-transparent
-                  font-bold
-                  text-4xl
-                  lg:text-[46px]
-                "
-                >
-                  {item.value}
-                </span>
-              </div>
+              <AnalyticCard
+                icon={item.icon}
+                title={item.title}
+                value={item.value}
+              />
             </div>
           );
         })}

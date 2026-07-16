@@ -27,7 +27,7 @@ function Landing() {
       <WorkingProcess />
       <Mission />
       <SeoPartner />
-      {/* <Blogs /> */}
+      <Blogs />
       <Reviews />
       <Footer />
     </div>
